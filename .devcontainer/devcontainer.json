@@ -1,0 +1,7 @@
+{
+  "name": "SeannyPhoenix/scratch",
+  "dockerFile": "Dockerfile",
+  "features": {
+    "ghcr.io/devcontainers/features/go": {}
+  }
+}
