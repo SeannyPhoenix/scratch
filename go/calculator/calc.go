@@ -1,18 +1,18 @@
 package calculator
 
-func add(left, right int) int {
+func Add(left, right int) int {
 	return left + right
 }
 
-func subtract(left, right int) int {
+func Subtract(left, right int) int {
 	return left - right
 }
 
-func multiply(left, right int) int {
+func Multiply(left, right int) int {
 	return left * right
 }
 
-func divide(left, right int) (int, error) {
+func Divide(left, right int) (int, error) {
 	if right == 0 {
 		return 0, &divideByZeroError{}
 	}
