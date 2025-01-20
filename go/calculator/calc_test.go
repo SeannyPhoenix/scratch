@@ -26,7 +26,7 @@ func TestAdd(t *testing.T) {
 			t.Parallel()
 			assert := assert.New(t)
 
-			result := add(tc.left, tc.right)
+			result := Add(tc.left, tc.right)
 			assert.Equal(tc.expected, result)
 		})
 	}
@@ -51,7 +51,7 @@ func TestSubtract(t *testing.T) {
 			t.Parallel()
 			assert := assert.New(t)
 
-			result := subtract(tc.left, tc.right)
+			result := Subtract(tc.left, tc.right)
 			assert.Equal(tc.expected, result)
 		})
 	}
@@ -76,7 +76,7 @@ func TestMultiply(t *testing.T) {
 			t.Parallel()
 			assert := assert.New(t)
 
-			result := multiply(tc.left, tc.right)
+			result := Multiply(tc.left, tc.right)
 			assert.Equal(tc.expected, result)
 		})
 	}
@@ -103,7 +103,7 @@ func TestDivide(t *testing.T) {
 			t.Parallel()
 			assert := assert.New(t)
 
-			result, err := divide(tc.left, tc.right)
+			result, err := Divide(tc.left, tc.right)
 
 			if tc.err != nil {
 				assert.Equal(tc.err, err)
