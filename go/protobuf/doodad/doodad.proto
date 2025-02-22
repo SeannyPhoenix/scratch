@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package doodad;
+
+option go_package = "github.com/seannyphoenix/scratch/go/protobuf/internal/doodad;doodad";
+
+message DooDad {
+  bytes id = 1;
+  string name = 2;
+  string description = 3;
+}
