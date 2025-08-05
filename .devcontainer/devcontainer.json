@@ -3,11 +3,16 @@
   "dockerFile": "Dockerfile",
   "features": {
     "ghcr.io/devcontainers/features/go": {},
-    "ghcr.io/devcontainers-extra/features/protoc-asdf:1": {}
+    "ghcr.io/devcontainers-extra/features/protoc-asdf:1": {},
+		"ghcr.io/devcontainers-extra/features/typescript:2": {},
+    "ghcr.io/rocker-org/devcontainer-features/apt-packages:1": {"packages": "bash-completion"}
   },
   "customizations": {
     "vscode": {
       "extensions": [
+        "github.copilot",
+        "github.copilot-chat",
+        "golang.go",
         "zxh404.vscode-proto3"
       ]
     }
