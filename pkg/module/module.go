@@ -1,24 +1,33 @@
 package module
 
-import "context"
+import (
+	"context"
+	"fmt"
+
+	"github.com/seannyphoenix/scratch/pkg/unit"
+)
 
 type Module struct {
 	Name string
 
-	runner func(context.Context) error
+	units []unit.Unit
 }
 
-func NewModule(name string, runner func(context.Context) error) Module {
+func NewModule(name string, units []unit.Unit) Module {
 	return Module{
-		Name:   name,
-		runner: runner,
+		Name:  name,
+		units: units,
 	}
 }
 
 func (m *Module) Run(ctx context.Context) error {
-	if m.runner == nil {
-		return nil
+	for _, u := range m.units {
+		fmt.Printf("Running unit: %s\n", u.Name)
+		if err := u.Run(ctx); err != nil {
+			return err
+		}
+		fmt.Println()
 	}
 
-	return m.runner(ctx)
+	return nil
 }

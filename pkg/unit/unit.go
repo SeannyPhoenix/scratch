@@ -1,6 +1,9 @@
 package unit
 
-import "context"
+import (
+	"context"
+	"fmt"
+)
 
 type Unit struct {
 	Name   string
@@ -18,5 +21,11 @@ func (u Unit) Run(ctx context.Context) error {
 	if u.runner == nil {
 		return nil
 	}
-	return u.runner(ctx)
+
+	error := u.runner(ctx)
+	if error != nil {
+		return fmt.Errorf("unit %s: %w", u.Name, error)
+	}
+
+	return nil
 }

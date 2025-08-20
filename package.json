@@ -1,0 +1,20 @@
+{
+  "name": "scratch",
+  "version": "1.0.0",
+  "description": "A place to play around with ideas",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SeannyPhoenix/scratch.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SeannyPhoenix/scratch/issues"
+  },
+  "homepage": "https://github.com/SeannyPhoenix/scratch#readme"
+}
