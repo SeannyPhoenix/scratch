@@ -4,13 +4,12 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/seannyphoenix/scratch/internal/scratch/other"
 	"github.com/seannyphoenix/scratch/internal/scratch/stdlib"
 	"github.com/seannyphoenix/scratch/pkg/module"
 )
 
 var groups = [][]module.Module{
-	other.Modules,
+	// other.Modules,
 	stdlib.Modules,
 }
 

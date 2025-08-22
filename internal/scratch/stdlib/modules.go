@@ -1,14 +1,13 @@
 package stdlib
 
 import (
-	"github.com/seannyphoenix/scratch/internal/scratch/stdlib/log/slog"
-	"github.com/seannyphoenix/scratch/internal/scratch/stdlib/math/big"
-	"github.com/seannyphoenix/scratch/internal/scratch/stdlib/time"
+	"github.com/seannyphoenix/scratch/internal/scratch/stdlib/errors"
 	"github.com/seannyphoenix/scratch/pkg/module"
 )
 
 var Modules = []module.Module{
-	slog.Module,
-	time.Module,
-	big.Module,
+	// slog.Module,
+	// time.Module,
+	// big.Module,
+	errors.Module,
 }
